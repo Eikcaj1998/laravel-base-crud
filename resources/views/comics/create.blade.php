@@ -22,17 +22,25 @@
                     name="series">
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-4">
+                <label for="date" class="form-label">Data di Uscita</label>
+                <input type="text" class="form-control" placeholder="Sale Date" name="sale_date">
+            </div>
+            <div class="col-7">
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Copertina</label>
                     <input type="text" class="form-control" id="thumb" placeholder="Url della copertina" 
                     name="thumb">
                 </div>
             </div>
-            <div class="col-6">
-                <input type="text" class="form-control" placeholder="Sale Date" name="sale_date">
+            <div class="col-1">
+                <div class="mb-3">
+                    <img id="preview" src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png" 
+                    alt="" class="img-fluid">
+                </div>
             </div>
             <div class="col-6">
+                <label for="type" class="form-label">Tipo</label>
                 <input type="text" class="form-control" placeholder="Type" name="type">
             </div>
             <div class="col-12">
@@ -59,4 +67,16 @@
         </div>
     </form>
 </div>
+@endsection
+@section('extra-js')
+    <script>
+        const placeholder = "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png"
+        const logoInput = document.getElementById('thumb');
+        const previewImg = document.getElementById('preview');
+        logoInput.addEventListener('input', function() {
+            const url = logoInput.value;
+          if (url)  previewImg.src = url;
+          else previewImg.src = placeholder;
+        });
+    </script>
 @endsection

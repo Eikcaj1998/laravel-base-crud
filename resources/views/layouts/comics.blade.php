@@ -15,6 +15,8 @@
     @yield('main-content')
 
    @include('includes.footer')
+   
+   @yield('extra-js')
 </body>
 </html>
 

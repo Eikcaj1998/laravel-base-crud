@@ -14,7 +14,7 @@
             <nav>
                 <ul>
                     <li class="fw-bold"><a>Characters</a></li>
-                    <li class="fw-bold"><a href="{{route('comics.index')}}">Comics</a></li>
+                    <li class="fw-bold"><a href="{{ route('comics.index')}}">Comics</a></li>
                     <li class="fw-bold"><a>Movies</a></li>
                     <li class="fw-bold"><a>Tv</a></li>
                     <li class="fw-bold"><a>Games</a></li>

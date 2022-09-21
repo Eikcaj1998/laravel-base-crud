@@ -16,7 +16,7 @@
             @endforeach
         </div>
         <div class="col-12 d-flex justify-content-center">
-            <button class="btn btn-primary fw-bold">Load More</button>
+          <a href="{{route('comics.create')}}" class="btn btn-primary fw-bold my-4">Aggiungi Fumetto</a>
         </div>
     </div>
 </div>

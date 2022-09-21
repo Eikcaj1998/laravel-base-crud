@@ -1,0 +1,58 @@
+footer {
+    background-image:url('../images/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    .col-4{
+        padding-top: 40px;
+
+    }
+    h4 {
+        color:white;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    ul{
+        padding-left: 0;
+        li a {
+            color:gray;
+        font-size: 12px;
+        }
+    }
+    .img-behind{
+        background-image: url( '../images/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    //footer-bottom
+    #bottom-footer {
+        background-color: #343434;
+        height: 88px;
+        padding: 23px;
+
+        #sign-up {
+        
+            color: white;
+            border: 2px solid dodgerblue;
+            padding: 10px;
+            transition: 0.7s;
+            
+            &:hover,
+            &:active {
+                background-color: dodgerblue;
+            }
+        }
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+           img {
+            margin-left: 15px;
+            width: 21px;
+   
+           }
+        }
+    }
+}

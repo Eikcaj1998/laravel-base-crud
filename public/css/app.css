@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css2?family=Raleway&display=swap);.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+header .blue {
+  background-color: #0282F9;
+}
+header .blue ul {
+  list-style-type: none;
+}
+header img {
+  height: 65px;
+}
+header .py-2 ul {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+}
+header .py-2 ul li {
+  padding: 10px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bolder;
+}
+header .py-2 ul li a:hover, header .py-2 ul li a:active {
+  color: dodgerblue;
+  border-bottom: 5px solid dodgerblue;
+}
+
+main {
+  background-color: black;
+  z-index: 1;
+}
+main .jumbotron {
+  background-image: url(../images/jumbotron.jpg);
+  width: 100%;
+  height: 25rem;
+}
+main .container {
+  position: relative;
+}
+main .flag {
+  background-color: #0282f9;
+  position: absolute;
+  top: -56px;
+  left: 10px;
+  padding: 0.5rem;
+  text-align: center;
+}
+main .comic-card {
+  width: 16.6666666667%;
+  padding: 1rem;
+}
+main .comic-card img {
+  height: 12rem;
+  width: 12rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+main button {
+  text-transform: uppercase;
+  padding: 1rem 6rem;
+  margin: 2rem;
+}
+main .background {
+  background-color: #0282f9;
+  padding: 2rem;
+}
+main .background img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 0.8rem;
+}
+
+.single .jumbotron {
+  background-image: url(../images/jumbotron.jpg);
+  width: 100%;
+  height: 25rem;
+  margin-bottom: 0;
+}
+.single .container {
+  position: relative;
+}
+.single .cover {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  text-align: center;
+  border: solid white 1px;
+}
+.single h4 {
+  font-size: 13px;
+  font-weight: bold;
+}
+.single .fs-12 {
+  font-size: 12px;
+  text-align: justify;
+}
+.single .green {
+  background-color: #55BA59;
+}
+.single .text-green {
+  color: #BAFD8D;
+}
+.single .azure {
+  color: #00A9D9;
+}
+.single .grey {
+  background-color: #F6F6F6;
+}
+.single .w-45 {
+  width: 45%;
+}
+.single .w-70 {
+  width: 70%;
+}
+
+footer {
+  background-image: url("../images/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+footer .col-4 {
+  padding-top: 40px;
+}
+footer h4 {
+  color: white;
+  margin: 10px 0;
+  font-size: 16px;
+}
+footer ul {
+  padding-left: 0;
+}
+footer ul li a {
+  color: gray;
+  font-size: 12px;
+}
+footer .img-behind {
+  background-image: url("../images/dc-logo-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+footer #bottom-footer {
+  background-color: #343434;
+  height: 88px;
+  padding: 23px;
+}
+footer #bottom-footer #sign-up {
+  color: white;
+  border: 2px solid dodgerblue;
+  padding: 10px;
+  transition: 0.7s;
+}
+footer #bottom-footer #sign-up:hover, footer #bottom-footer #sign-up:active {
+  background-color: dodgerblue;
+}
+footer #bottom-footer .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer #bottom-footer .d-flex img {
+  margin-left: 15px;
+  width: 21px;
+}

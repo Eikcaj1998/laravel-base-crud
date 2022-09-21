@@ -23,11 +23,6 @@ Route::get('/main', function () {
     
 })->name('series');
 
-Route::get('/single/{id}', function($id){
-    $products = config('comics');
-    if (!is_numeric($id) || $id < 0 || $id >= count($products)){
-        abort(404);
-    }
-    $product = $products[$id];
-    return view('single',compact('product'));
+Route::get('/comics', function(){
+    return view('comics.index');
 })->name('single');

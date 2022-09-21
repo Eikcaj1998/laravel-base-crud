@@ -1,6 +1,6 @@
 @extends('layouts.comics')
 @section('main-content')
 <main>
-    @include('includes.main')
+    @include('comics.index')
 </main>
 @endsection

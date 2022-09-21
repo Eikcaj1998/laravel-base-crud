@@ -17,12 +17,7 @@ Route::get('/', function () {
     $title = 'home';
     return view('home',compact('title'));
 });
-Route::get('/main', function () {
-    $data = config('comics');
-    return view('main',compact('data'));
-    
-})->name('series');
 
-Route::get('/comics', function(){
-    return view('comics.index');
-})->name('single');
+
+Route::get('/comics','ComicController@index')->name('comics.index');
+Route::resource('comics','ComicController');

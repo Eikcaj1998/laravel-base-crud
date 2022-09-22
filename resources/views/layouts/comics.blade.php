@@ -10,12 +10,12 @@
     <title></title>
 </head>
 <body>
-   @include('includes.header')
-
+    @include('includes.header')
+    
+    @include('includes.alert')
     @yield('main-content')
 
    @include('includes.footer')
-   
    @yield('extra-js')
 </body>
 </html>

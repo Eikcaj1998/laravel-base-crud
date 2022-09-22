@@ -2,11 +2,6 @@
 @section('main-content')
     <section class="single">
         <div class="jumbotron">
-            @if (session('message'))
-                <div class="alert alert-{{session('type')?? 'info'}}">
-                    {{session('message')}}
-                </div>
-            @endif
         </div>
         <div class="bg-primary py-5">
             <div class="container">
@@ -66,7 +61,8 @@
 
                 <a class="btn btn-small btn-primary" href="{{ route('comics.index')}}"> Torna Indietro</a>
                 <a class="btn btn-small btn-warning" href="{{ route('comics.edit', $comic->id ) }}"> Modifica</a>
-                <form action="{{ route('comics.destroy',$comic->id)}}" method="POST">
+                <form action="{{ route('comics.destroy',$comic->id)}}" method="POST" class="delete-form"
+                    data-comic="{{$comic->type}}">
                     @csrf
                     @method('DELETE')
                     <button class="btn ms-2 btn-danger"> Elimina</button>
@@ -77,4 +73,7 @@
         </div>
     </section>
     </section>
+@endsection
+@section('extra-js')
+<script src="{{asset('js/deleteConfirmation.js')}}"></script>
 @endsection

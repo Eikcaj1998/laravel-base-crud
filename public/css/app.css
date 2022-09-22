@@ -116,10 +116,11 @@ main .comic-card {
   left: 0;
 }
 main .comic-card .appair {
-  display: none;
   position: absolute;
   top: 20px;
-  left: 51px;
+  left: 32px;
+  z-index: 2;
+  display: none;
 }
 main .comic-card img {
   height: 12rem;
@@ -131,6 +132,9 @@ main .comic-card img {
 }
 main .comic-card img:hover {
   filter: opacity(0.3);
+}
+main .comic-card:hover .appair {
+  display: block;
 }
 main button {
   text-transform: uppercase;

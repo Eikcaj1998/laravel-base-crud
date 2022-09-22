@@ -10,19 +10,23 @@
                     @foreach ($comics as $comic)
                         <div class="comic-card">
                             <img src="{{ $comic->thumb }}"alt="">
-                            <div class="appair d-flex flex-column align-items-center">
-                                <a class="btn btn-primary text-light my-2 col-5 p-1 view" href="{{ route('comics.show', $comic->id) }}">
-                                  visualizza
-                                </a>
-                                <a class="btn bg-secondary text-light my-2 col-5 p-1 edit" href="{{ route('comics.edit', $comic->id) }}">
-                                    modifica  
-                                </a>
-                                <form action="{{ route('comics.destroy',$comic->id)}}" method="POST" class="delete-form"
-                                    data-comic="{{$comic->type}}">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn bg-danger text-light my-2 col-5 p-1 delete"> Elimina</button>
-                                </form>
+                            <div class="appair">
+                                <div class="d-flex flex-column align-items-center">
+                                    <a class="btn btn-primary text-light my-2 p-1 "
+                                        href="{{ route('comics.show', $comic->id) }}">
+                                        visualizza
+                                    </a>
+                                    <a class="btn bg-secondary text-light my-2 p-1"
+                                        href="{{ route('comics.edit', $comic->id) }}">
+                                        modifica
+                                    </a>
+                                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST"
+                                        class="delete-form" data-comic="{{ $comic->type }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn bg-danger text-light my-2 p-1"> Elimina</button>
+                                    </form>
+                                </div>
                             </div>
                             <h5 class="fw-bold text-light mt-3 fs-6">{{ $comic->series }}</h5>
                         </div>
@@ -63,5 +67,5 @@
     </main>
 @endsection
 @section('extra-js')
-<script src="{{asset('js/deleteConfirmation.js')}}"></script>
+    <script src="{{ asset('js/deleteConfirmation.js') }}"></script>
 @endsection

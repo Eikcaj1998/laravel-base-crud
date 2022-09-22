@@ -27,10 +27,11 @@ main {
     top:0;
     left: 0;
     .appair{
-      display: none;
       position: absolute;
       top:20px;
-      left: 51px;
+      left: 32px;
+      z-index: 2;
+      display: none;
     }
       img{
         height: 12rem;
@@ -41,7 +42,12 @@ main {
           filter: opacity(0.3);
         }
       }
-  }
+      
+
+    }
+    .comic-card:hover .appair{
+        display: block;
+    }
   button{
     text-transform: uppercase;
     padding: 1rem 6rem;

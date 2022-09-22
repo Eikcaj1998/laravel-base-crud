@@ -60,6 +60,11 @@
 
                 <a class="btn btn-small btn-primary" href="{{ route('comics.index')}}"> Torna Indietro</a>
                 <a class="btn btn-small btn-warning" href="{{ route('comics.edit', $comic->id ) }}"> Modifica</a>
+                <form action="{{ route('comics.destroy',$comic->id)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn ms-2 btn-danger"> Elimina</button>
+                </form>
             </div>
 
         </div>

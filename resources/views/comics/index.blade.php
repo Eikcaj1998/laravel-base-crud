@@ -16,9 +16,11 @@
                                 <a class="btn bg-secondary text-light my-2 col-5 p-1 edit" href="{{ route('comics.edit', $comic->id) }}">
                                     modifica  
                                 </a>
-                                <a class="btn bg-danger text-light my-2 col-5 p-1 delete" href="{{ route('comics.show', $comic->id) }}">
-                                    elimina  
-                                </a>
+                                <form action="{{ route('comics.destroy',$comic->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn bg-danger text-light my-2 col-5 p-1 delete"> Elimina</button>
+                                </form>
                             </div>
                             <h5 class="fw-bold text-light mt-3 fs-6">{{ $comic->series }}</h5>
                         </div>

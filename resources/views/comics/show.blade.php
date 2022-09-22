@@ -20,12 +20,12 @@
                     </div>
                     <div class="d-flex text-white green border-bottom border-secondary">
                         <div class="py-3 d-flex justify-content-between border-right  border-secondary col-9">
-                            <span>U.S. Price: {{ $comic->price }}</span>
+                            <span>U.S. Price: {{ $comic->price }} $</span>
                             <span class="text-green">AVAILABLE</span>
                         </div>
                         <span class="px-3 py-3 border-secondary">Check Availability</span>
                     </div>
-                    <div>{{ $comic->description }}</div>
+                    <div class="mt-3">{{ $comic->description }}</div>
                 </div>
                 <div class="col-4 text-right">
                     <h4 class="text-secondary">ADVERTISEMENT</h4>
@@ -47,7 +47,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <span>U.S. Price:</span>
 
-                    <span class="fw-bold">{{ $comic->price }}</span>
+                    <span class="fw-bold"> {{ $comic->price }} $;</span>
 
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
@@ -57,12 +57,12 @@
 
                 </div>
             </div>
-            <div class="d-flex col-6 justify-content-between">
+            <div class="d-flex w-45 justify-content-between mb-4 p-0">
 
-                <a class="btn btn-small btn-primary" href="{{ route('comics.index')}}"> Torna Indietro</a>
-                <a class="btn btn-small btn-warning" href="{{ route('comics.edit', $comic->id ) }}"> Modifica</a>
-                <form action="{{ route('comics.destroy',$comic->id)}}" method="POST" class="delete-form"
-                    data-comic="{{$comic->type}}">
+                <a class="btn btn-small btn-primary" href="{{ route('comics.index') }}"> Torna Indietro</a>
+                <a class="btn btn-small btn-warning" href="{{ route('comics.edit', $comic->id) }}"> Modifica</a>
+                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form"
+                    data-comic="{{ $comic->type }}">
                     @csrf
                     @method('DELETE')
                     <button class="btn ms-2 btn-danger"> Elimina</button>
@@ -70,10 +70,8 @@
             </div>
 
         </div>
-        </div>
-    </section>
     </section>
 @endsection
 @section('extra-js')
-<script src="{{asset('js/deleteConfirmation.js')}}"></script>
+    <script src="{{ asset('js/deleteConfirmation.js') }}"></script>
 @endsection

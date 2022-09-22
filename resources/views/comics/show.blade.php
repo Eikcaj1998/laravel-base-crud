@@ -1,7 +1,13 @@
 @extends('layouts.comics')
 @section('main-content')
     <section class="single">
-        <div class="jumbotron"></div>
+        <div class="jumbotron">
+            @if (session('message'))
+                <div class="alert alert-{{session('type')?? 'info'}}">
+                    {{session('message')}}
+                </div>
+            @endif
+        </div>
         <div class="bg-primary py-5">
             <div class="container">
                 <div class="cover">

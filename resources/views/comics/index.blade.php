@@ -1,7 +1,13 @@
 @extends('layouts.comics')
 @section('main-content')
     <main>
-        <div class="jumbotron"></div>
+        <div class="jumbotron">
+            @if (session('message'))
+                <div class="alert alert-{{session('type')?? 'info'}}">
+                    {{session('message')}}
+                </div>
+            @endif
+        </div>
         <div class="container">
             <div class="row">
                 <div class=" text-uppercase col-2 flag fw-bold text-light fs-5">current series</div>

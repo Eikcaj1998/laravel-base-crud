@@ -37,10 +37,8 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $comic = new Comic();
-        $comic->fill($data);
-        $comic->save();
-        return redirect()->route('comics.index');
+        $comic = Comic::create($data);
+        return redirect()->route('comics.show',$comic)->with('type','success')->with('message',"$comic->type creato con successo");
     }
 
     /**
@@ -90,6 +88,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('message',"$comic->type eliminato con successo")->with('type','danger');
     }
 }

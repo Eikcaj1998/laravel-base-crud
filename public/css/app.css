@@ -111,6 +111,15 @@ main .flag {
 main .comic-card {
   width: 16.6666666667%;
   padding: 1rem;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+main .comic-card .appair {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 51px;
 }
 main .comic-card img {
   height: 12rem;
@@ -119,6 +128,9 @@ main .comic-card img {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+main .comic-card img:hover {
+  filter: opacity(0.3);
 }
 main button {
   text-transform: uppercase;

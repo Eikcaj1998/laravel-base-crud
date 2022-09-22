@@ -56,7 +56,11 @@
 
                 </div>
             </div>
-            <a class="btn btn-small btn-secondary" href="{{ route('comics.index') }}"> torna indietro</a>
+            <div class="d-flex col-6 justify-content-between">
+
+                <a class="btn btn-small btn-primary" href="{{ route('comics.index')}}"> Torna Indietro</a>
+                <a class="btn btn-small btn-warning" href="{{ route('comics.edit', $comic->id ) }}"> Modifica</a>
+            </div>
 
         </div>
         </div>
